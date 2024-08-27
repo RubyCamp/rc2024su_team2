@@ -11,5 +11,16 @@ module Scenes
                 @@atk_font = Gosu::Font.new(, name: DirectorBase::)             #カードのモンスターなどの攻撃力や効果の部分
                 @@describe_font =Gosu::Font.new(, name: DirectorBase::)         #カードのモンスターなどの説明の部分
 
-                WIDTH =                # カードの横幅(px)
-                HEIGHT = 2              # カードの高さ(px)
+                WIDTH = 100               # カードの横幅(px)
+                HEIGHT = 150              # カードの高さ(px)
+                
+                # 必要なアクセサメソッドの定義
+                attr_accessor :num, :x, :y, :z
+
+                # コンストラクタ
+                def initialize(_num, _x, _y, _z = 1)
+                    self.num = _num
+                    self.x = _x
+                    self.y = _y
+                    self.z = _z
+                    
