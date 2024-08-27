@@ -15,7 +15,7 @@ class MainWindow < Gosu::Window
   FULL_SCREEN = false
 
   # コンストラクタ
-  def initialize
+  def initialize 
     super WIDTH, HEIGHT, FULL_SCREEN
     self.caption = 'RubyCamp2024Summer Example'
 
