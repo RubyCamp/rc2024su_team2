@@ -22,7 +22,7 @@ module Scenes
         # 1フレーム分の描画処理
         def draw
           @bg_img.draw(0, 0, 0)
-          draw_text("島根遊戯王", :center, 280, font: :title, color: :red)
+          draw_text("島根王", :center, 280, font: :title, color: :red)
           draw_text("SPACEキーを押すとはじまるよ",:center, 350)
         end
       end

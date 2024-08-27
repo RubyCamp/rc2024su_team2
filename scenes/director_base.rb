@@ -1,5 +1,6 @@
 module Scenes
   # ディレクタークラスの共通部分
+  
   class DirectorBase
     FONT_FILENAME = "DelaGothicOne-Regular.ttf" # 画面描画用フォントファイル名
     RIGHT_MARGIN = 10 # 文字列描画における右端寄せ指定の際の右側余白ピクセル数
