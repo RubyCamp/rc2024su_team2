@@ -19,7 +19,7 @@ module Scenes
         end
       end
 
-      def button_down(id)
+      def button_down(id) ## ボタンだよん
         if id == Gosu::KB_D  # "D" キーが押されたとき
           create_rectangles
         elsif id == Gosu::KB_R  # "R" キーが押されたとき
@@ -34,7 +34,6 @@ module Scenes
         x_start = 230
         current_x_positions = @rectangles.map { |rect| rect[:x] }  # 既存の長方形の x 座標を取得
         colors = [Gosu::Color::WHITE, Gosu::Color::RED, Gosu::Color::YELLOW, Gosu::Color::BLUE]  # 色の配列
-    
         x = x_start
     
         while @rectangles.size < required_count
