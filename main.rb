@@ -3,12 +3,14 @@ require 'gosu'
 require_relative 'scenes/manager'
 require_relative 'scenes/director_base'
 require_relative 'scenes/title/director'
+require_relative 'scenes/game/director'
+require_relative 'scenes/ending/director'
 
 =begin
-require_relative 'scenes/game/director'
 require_relative 'scenes/ending/director'
 require_relative 'scenes/game_over/director'
 =end
+
 # ゲームのメインウィンドウ（メインループ）用クラス
 class MainWindow < Gosu::Window
   # 各種定数定義
@@ -23,8 +25,9 @@ class MainWindow < Gosu::Window
 
     @scene_manager = Scenes::Manager.instance
     @scene_manager.add(:title, Scenes::Title::Director.new)
-    #@scene_manager.add(:game, Scenes::Game::Director.new)
-    #@scene_manager.add(:ending, Scenes::Ending::Director.new)
+    @scene_manager.add(:game, Scenes::Game::Director.new)
+  
+    @scene_manager.add(:ending, Scenes::Ending::Director.new)
     #@scene_manager.add(:game_over, Scenes::GameOver::Director.new)
     @scene_manager.set(:title)
   end
