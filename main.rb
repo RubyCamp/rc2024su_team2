@@ -3,6 +3,7 @@ require 'gosu'
 require_relative 'scenes/manager'
 require_relative 'scenes/director_base'
 require_relative 'scenes/title/director'
+
 =begin
 require_relative 'scenes/game/director'
 require_relative 'scenes/ending/director'
@@ -16,7 +17,7 @@ class MainWindow < Gosu::Window
   FULL_SCREEN = false
 
   # コンストラクタ
-  def initialize 
+  def initialize
     super WIDTH, HEIGHT, FULL_SCREEN
     self.caption = 'RubyCamp2024Summer Example'
 
