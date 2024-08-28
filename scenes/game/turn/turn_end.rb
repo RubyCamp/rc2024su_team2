@@ -6,6 +6,7 @@ module Scenes
                 def update
                 exit if Gosu.button_down?(Gosu::KB_ESCAPE)
                 if Gosu.button_down?(Gosu::KB_E)
+                    transition(:ending)
                     # ターンを終了する
                     # ターン数を加算する
                 end

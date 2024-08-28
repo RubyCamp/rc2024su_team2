@@ -5,8 +5,9 @@ require_relative 'scenes/director_base'
 require_relative 'scenes/title/director'
 require_relative 'scenes/game/director'
 require_relative 'scenes/ending/director'
-=begin
 require_relative 'scenes/ending/director'
+
+=begin
 require_relative 'scenes/game_over/director'
 =end
 
