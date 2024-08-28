@@ -5,10 +5,14 @@ module Scenes
   class Manager
     include Singleton # 個々のシーン毎のディレクターオブジェクトからも使用するためシングルトン構造を導入する
 
+    attr_accessor :score, :card_deck, :hands_of_cards
     # コンストラクタ
     def initialize
       @scenes = {}   # 個別シーンの進行を担当するディレクターオブジェクトをラベルと共に保持するハッシュ
       @current = nil # ある1フレームにおけるアクティブなディレクターオブジェクト（のラベル）を指す
+      @score = 0
+      @cards_deck = []
+      @hands_of_cards = []
     end
 
     # 管理下に置くディレクターオブジェクトの追加
