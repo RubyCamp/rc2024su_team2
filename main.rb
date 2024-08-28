@@ -4,8 +4,8 @@ require_relative 'scenes/manager'
 require_relative 'scenes/director_base'
 require_relative 'scenes/title/director'
 
-=begin
 require_relative 'scenes/game/director'
+=begin
 require_relative 'scenes/ending/director'
 require_relative 'scenes/game_over/director'
 =end
@@ -23,7 +23,7 @@ class MainWindow < Gosu::Window
 
     @scene_manager = Scenes::Manager.instance
     @scene_manager.add(:title, Scenes::Title::Director.new)
-    #@scene_manager.add(:game, Scenes::Game::Director.new)
+    @scene_manager.add(:game, Scenes::Game::Director.new)
     #@scene_manager.add(:ending, Scenes::Ending::Director.new)
     #@scene_manager.add(:game_over, Scenes::GameOver::Director.new)
     @scene_manager.set(:title)
@@ -42,6 +42,7 @@ class MainWindow < Gosu::Window
   # 1フレーム分の描画処理
   def draw
     @scene_manager.draw
+    # draw_rect(0,0,30,30,Gosu::Color::RED)
   end
 end
 
