@@ -162,6 +162,7 @@ module Scenes
 
         # 開いたカードリストをクリア
         @opened_cards.clear
+        end
       end
     end
   end
