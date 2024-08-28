@@ -15,6 +15,7 @@ module Scenes
         score: Gosu::Font.new(64, name: FONT_FILENAME),
         judgement_result: Gosu::Font.new(128, name: FONT_FILENAME),
       }
+      
 
       @colors = {
         black: 0xff_000000,
